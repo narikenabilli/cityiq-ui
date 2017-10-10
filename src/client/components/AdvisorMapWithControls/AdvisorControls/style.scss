@@ -1,0 +1,164 @@
+.controls {
+  left: 14px;
+  position: absolute;
+  top: 10px;
+  z-index: 2;
+}
+
+%formControl {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  display: block;
+  height: 36px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 0 12px;
+  text-overflow: ellipses;
+  width: 240px;
+}
+
+.searchBox {
+  @extend %formControl;
+
+  padding-right: 34px;
+}
+
+$targetStrokeWeight: 2px;
+$tagerStrokeColor: #ccc;
+$targetCircleSize: 22px;
+$targetSize: 30px;
+$targetButtonSize: 32px;
+
+.locationButton {
+  display: block;
+  background-color: #fff;
+  border: 0;
+  border-radius: 3px;
+  position: absolute;
+  height: $targetButtonSize;
+  outline: none;
+  right: 2px;
+  top: 2px;
+  width: $targetButtonSize;
+
+  > i {
+    box-sizing: border-box;
+    display: block;
+    border-radius: 50%;
+    border: $targetStrokeWeight solid $tagerStrokeColor;
+    height: $targetCircleSize;
+    left: ($targetButtonSize - $targetCircleSize) / 2;
+    position: absolute;
+    top: ($targetButtonSize - $targetCircleSize) / 2;
+    width: $targetCircleSize;
+  }
+
+  &::after {
+    border-top: $targetStrokeWeight solid $tagerStrokeColor;
+    content: '';
+    display: block;
+    left: ($targetButtonSize - $targetSize) / 2;
+    margin-top: -$targetStrokeWeight/2;
+    position: absolute;
+    top: 50%;
+    width: $targetSize;
+  }
+
+  &::before {
+    border-left: $targetStrokeWeight solid $tagerStrokeColor;
+    content: '';
+    display: block;
+    position: absolute;
+    height: $targetSize;
+    left: 50%;
+    margin-left: -$targetStrokeWeight/2;
+    top: ($targetButtonSize - $targetSize) / 2;
+  }
+}
+
+.locationButton:hover {
+  > i,
+  &::after,
+  &::before {
+    border-color: #000;
+  }
+}
+
+.locationButton.active {
+  background-color: #97d2ff;
+
+  > i,
+  &::after,
+  &::before {
+    border-color: #000;
+  }
+}
+
+.select {
+  @extend %formControl;
+}
+
+.locationWrap {
+  position: relative;
+}
+
+.analyzeButton {
+  @extend %formControl;
+
+  background-color: #ccc;
+}
+
+.analyzeButton.active {
+  background-image: linear-gradient(to bottom, #fa8787, #ab0202);
+  border-color: #ab0202;
+  color: #fff;
+  cursor: pointer;
+}
+
+.analyzeButton.active[disabled] {
+  background-image: none;
+  border-color: transparent;
+  color: #000;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.spinner {
+  width: $targetButtonSize;
+  height: $targetButtonSize;
+
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  animation-delay: -1.0s;
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+  }
+}

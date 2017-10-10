@@ -1,0 +1,946 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>README</title></head><body><article class="markdown-body"><h1 id="predix---cityiq--googlemaps-poc-app">PREDIX - CITYIQ / GOOGLE.MAPS POC APP</h1>
+<h2 id="video">Video</h2>
+<p>The demo video is available on the YouTube by <a href="https://youtu.be/klmUv54Px0M">this link</a> only.</p>
+<h2 id="deployed-project">Deployed project</h2>
+<p>Deployed to Predix Cloud project is available by link <a href="https://topcoder-predix-cityiq.run.aws-usw02-pr.ice.predix.io/">https://topcoder-predix-cityiq.run.aws-usw02-pr.ice.predix.io/</a>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Node v7.5+</li>
+<li>Npm v4.2.1+</li>
+</ul>
+<h2 id="setup">Setup</h2>
+<h3 id="server-config">Server Config</h3>
+<p>Server config file is placed at the <code>/src/server/config/config.js</code>. It lacks some values which have to be obtained in the steps below.<br>
+Don't directly run commands which I mention in the description in this table. I only put them as a reference here, but they have to be run in context with proper arguments. Please follow steps from the <a href="#predix-uaa-and-asset-services">Predix UAA and Asset Services section</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>predix.uaaUrl</code></td>
+<td>Predix UAA Service URI.<br> You get it after performing <code>px create-service predix-uaa Free your-name-uaa</code> in <a href="https://www.predix.io/resources/tutorials/tutorial-details.html?tutorial_id=2396&amp;tag=1719&amp;journey=Hello%20World&amp;resources=1844,2388,2369,2396,1569,1523">Predix Guide</a> section <strong>Create an instance of the User Account and Authentication (UAA) Service</strong></td>
+</tr>
+<tr>
+<td><code>predix.clientId</code></td>
+<td>Id of the client which has access to Predix Asset Service.<br> You define it as an argument <code>--client-id app_client_id</code> when performing command <code>px cs predix-asset Free your-name-asset your-name-uaa --client-id app_client_id</code> in <a href="https://www.predix.io/resources/tutorials/tutorial-details.html?tutorial_id=2396&amp;tag=1719&amp;journey=Hello%20World&amp;resources=1844,2388,2369,2396,1569,1523">Predix Guide</a> section <strong>Create a Predix Service</strong></td>
+</tr>
+<tr>
+<td><code>predix.clientSecret</code></td>
+<td>A secret of the client with id <code>predix.clientId</code> from the item above.<br> You define during performing command above when you are prompted for <code>Client Secret&gt;</code>.</td>
+</tr>
+<tr>
+<td><code>predix.apiUrl</code></td>
+<td>Predix API endpoint.<br> You get as an output of the command <code>px cs predix-asset Free your-name-asset your-name-uaa --client-id app_client_id</code> in <a href="https://www.predix.io/resources/tutorials/tutorial-details.html?tutorial_id=2396&amp;tag=1719&amp;journey=Hello%20World&amp;resources=1844,2388,2369,2396,1569,1523">Predix Guide</a> section <strong>Create a Predix Service</strong></td>
+</tr>
+<tr>
+<td><code>predix.zoneId</code></td>
+<td>Predix Zone Id of the created instance of Predix Asset service.<br> You get as an output of the command <code>px cs predix-asset Free your-name-asset your-name-uaa --client-id app_client_id</code> in <a href="https://www.predix.io/resources/tutorials/tutorial-details.html?tutorial_id=2396&amp;tag=1719&amp;journey=Hello%20World&amp;resources=1844,2388,2369,2396,1569,1523">Predix Guide</a> section <strong>Create a Predix Service</strong></td>
+</tr>
+<tr>
+<td><code>google.places.key</code></td>
+<td>Google API key, which allows access to <strong>Google Places API Web Service</strong>.<br> To obtain it, please, follow <a href="#google-maps-api">Google Maps API section</a>.</td>
+</tr></tbody></table>
+<p>Manifest file for deploying to Predix Cloud is placed in the root of the project <code>/manifest.yml</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>applications[0].name</code></td>
+<td>Unique for Predix application name. It will be a part of your application domain like <code>https://${applications[0].name}.run.aws-usw02-pr.ice.predix.io</code>. You can just define any, which you want as long as it's unique.</td>
+</tr></tbody></table>
+<h3 id="client-config">Client Config</h3>
+<p>Client config is placed at the <code>/src/clinet/config/config.js</code>. It's separated from the server config, so that server config values are not included in scripts bundle which can be accessed by anyone.<br>
+Only one value has to be configured there.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GOOGLE_MAPS_KEY</code></td>
+<td>Google API key, which allows access to <strong>Google Maps JavaScript API</strong>.<br> To obtain it, please, follow <a href="#google-maps-api">Google Maps API section</a>.</td>
+</tr></tbody></table>
+<h3 id="predix-uaa-and-asset-services">Predix UAA and Asset Services</h3>
+<p>I suppose that you already have a Predix account. Otherwise, you can <a href="https://www.predix.io/registration/">register</a>. Be aware that if you are not white-listed during some Topcoder challenge, your application can be rejected. See <a href="http://predix.topcoder.com/">Predix Topcoder Community</a> for more information.</p>
+<p>Please, complete sections <strong>What you need to set up</strong> and <strong>What you need to do</strong> from <a href="https://www.predix.io/resources/tutorials/tutorial-details.html?tutorial_id=2396&amp;tag=1719&amp;journey=Hello%20World&amp;resources=1844,2388,2369,2396,1569,1523">Predix Guide</a>.<br>
+In the description below I will only tell which configuration values you will get on each step.</p>
+<ul>
+<li>
+<p><strong>What you need to set up</strong></p>
+<ul>
+<li>
+<p>Make sure you've installed all required tools.</p>
+</li>
+<li>
+<p><strong>It's important to have the latest version 0.6.3 or later of Predix CLI</strong>. You can check a version number by running <code>px -v</code> in your console. To update, just install a newer version following <a href="https://github.com/PredixDev/predix-cli">Predix CLI readme</a>.</p>
+</li>
+<li>
+<p>In case of error</p>
+<pre><code>FAILED
+Error read/writing config:  open /Users/%user%/.cf/config.json: permission denied
+</code></pre>
+<p>Remove the <code>~/.cf</code> dir first <code>sudo rm -r ~/.cf</code> and after run some <code>px</code>/<code>cf</code> command, for example <code>px -h</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>What you need to do</strong></p>
+<ul>
+<li>
+<p><strong>Sign in to Predix</strong></p>
+</li>
+<li>
+<p><strong>Create an instance of the User Account and Authentication (UAA) Service</strong></p>
+<p>On this step, you will obtain <code>uri</code> for <code>predix.uaaUrl</code> value in config, which looks like <code>https://123a4567-89a0-1abc-123a-1ab2c3d456e7.predix-uaa.run.aws-usw02-pr.ice.predix.io</code></p>
+</li>
+<li>
+<p><strong>Create a Predix Service</strong></p>
+<p>You will obtain:</p>
+<ul>
+<li><code>predix.apiUrl</code> you will get ti is an output in <code>uri</code> property. It looks like <code>https://predix-asset.run.aws-usw02-pr.ice.predix.io</code>.</li>
+<li><code>predix.clientId</code> is the value you've entered instead of <code>app_client_id</code> in the command <code>px cs predix-asset Free your-name-asset your-name-uaa --client-id app_client_id</code></li>
+<li><code>predix.clientSecret</code> is the secret word which you entered when prompted for <code>Client Secret&gt;</code></li>
+<li><code>predix.zoneId</code> you obtain as an output of the command above as a property <code>zone.http-header-value</code> which looks like <code>kj1234j4-12k2-4cd3-1233-12k12k22133k</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="verification-of-predix-services-configuration">Verification of Predix Services configuration</h4>
+<p>After all values like <code>predix.*</code> are configured, you can check it locally by running the next commands:</p>
+<ul>
+<li><code>npm i</code> - to install dependencies</li>
+<li><code>npm run data:view</code> - to show saved data</li>
+</ul>
+<p>If everything is ok, it has to return an empty array (means there is no data yet). If something going wrong it will return an error.</p>
+<h3 id="google-maps-api">Google Maps API</h3>
+<p>First login at <a href="https://developers.google.com">https://developers.google.com</a>.</p>
+<p>For server side proceed to <a href="https://developers.google.com/places/web-service/">https://developers.google.com/places/web-service/</a>.</p>
+<ul>
+<li>Click <strong>GET A KEY</strong> button.</li>
+<li>In popup select <strong>Create a new project</strong>, enter a project name and click <strong>CREATE AND ENABLE PROJECT</strong>.</li>
+<li>After that, you will get a key which provides access to <strong>Google Places API Web Service</strong>.<br>
+This value is for <strong>server</strong> config <code>google.places.key</code> value.</li>
+</ul>
+<p>For client side proceed to <a href="https://developers.google.com/maps/documentation/javascript/">https://developers.google.com/maps/documentation/javascript/</a>. And make the same steps.</p>
+<ul>
+<li>Click <strong>GET A KEY</strong> button, select <strong>Create a new project</strong>, enter another project name and click <strong>CREATE AND ENABLE PROJECT</strong>.</li>
+<li>You will get a key which provides access to <strong>Google Maps JavaScript API</strong>.</li>
+<li>This value is for <strong>client</strong> config <code>GOOGLE_MAPS_KEY</code> value.</li>
+</ul>
+<p><strong>NOTE</strong>: In this setup, we create two different projects for client and server side, so the client side google API key gives access to the limited set of APIs. I think this level of security is enough for the POC project, but for production usage, we have to restrict these key's usage in the API Console, see <a href="https://support.google.com/googleapi/answer/6310037?hl=en_US">Best practices for securely using API keys</a>.</p>
+<h2 id="run-locally">Run locally</h2>
+<p>To run locally make sure you've completed setup section above and install npm dependencies by <code>npm i</code>.</p>
+<p>To run in development mode:</p>
+<ul>
+<li><code>npm run dev</code> - run server which also uses webpack-dev-middleware to serve client code from memory and enable HMR.</li>
+</ul>
+<p>To run in production mode:</p>
+<ul>
+<li><code>npm run build</code> - builds client code to the <code>dist</code> directory</li>
+<li><code>npm start</code> - run server which also servers client side from <code>dist</code> directory</li>
+</ul>
+<p>Navigate to <a href="http://localhost:3000/">http://localhost:3000/</a> if you didn't change port number by setting <code>PORT</code> environment variable.</p>
+<h2 id="deploy-to-predix-cloud">Deploy to Predix Cloud</h2>
+<p>Define <code>applications[0].name</code> in <code>/manifest.yml</code> first. You can use any value as long as it's unique for Predix and can be a part of the domain name.<br>
+It will be a part of service url, which will looks like <code>https://${applications[0].name}.run.aws-usw02-pr.ice.predix.io</code>.</p>
+<p>In the project directory run the following commands using console:</p>
+<ul>
+<li><code>px login</code> - login to Predix, if you are not logged in yet</li>
+<li><code>px push</code> - uploads code to the server, build and run the application in the cloud</li>
+</ul>
+<p><code>px push</code> will output some info, including your service domain in <code>urls</code> option which looks like <code>${applications[0].name}.run.aws-usw02-pr.ice.predix.io</code>. When open in browser, don't forget to add <code>https://</code>.</p>
+<h2 id="commands">Commands</h2>
+<p>Before running commands don't forget to complete setup and install npm dependencies.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>npm run dev</code></td>
+<td>starts server for development (watch changes with nodemon for server-side and with webpack for client-side)</td>
+</tr>
+<tr>
+<td><code>npm start</code></td>
+<td>starts server for production (serves client side from <code>/dist</code> directory)</td>
+</tr>
+<tr>
+<td><code>npm run data:view</code></td>
+<td>show saved requests with responses to Predix Asset Service, for test purposes</td>
+</tr>
+<tr>
+<td><code>npm run data:clear</code></td>
+<td>remove saved to Predix Asset Service requests with responses, for test purposes</td>
+</tr>
+<tr>
+<td><code>npm run build</code></td>
+<td>builds client side to <code>/dist</code> directory for production, it's invoked in postinstall process</td>
+</tr>
+<tr>
+<td><code>npm run build:dev</code></td>
+<td>builds client side to <code>/dist</code> directory in development mode, without files minifications</td>
+</tr>
+<tr>
+<td><code>npm run lint</code></td>
+<td>lint all js code with eslint</td>
+</tr>
+<tr>
+<td><code>npm run lint:fix</code></td>
+<td>lint all js code with eslint and fix errors which could be fixed automatically</td>
+</tr></tbody></table>
+<h2 id="verification">Verification</h2>
+<p>As far as I know, there are two US cities which CityIQ Service has information about traffic and pedestrian activity: <strong>San Diego</strong> and <strong>Atlanta</strong>.</p>
+<p>To verify solution you can make various requests, choosing <strong>Place Type</strong> and defining location.<br><br>
+To define location you can make a search by text query like <code>San Diego</code>. Or click on target icon near search field and after click on the map to define location manually.<br><br>
+Bounds around location are always calculated automatically to make bounds reasonable for current location.<br><br>
+Pressing <strong>Analyze</strong> button will send requests to the server, and response will be displayed on the map.</p>
+<p>After that you can run in console:</p>
+<ul>
+<li><code>npm run data:view</code> - to view saved to Predix Asset requests (objects are shown not fully)</li>
+</ul>
+<p>In case you've made too many requests and it's hard to track them, you can run:</p>
+<ul>
+<li><code>npm run data:clear</code> -  to remove all saved requests from Predix Asset</li>
+</ul>
+<h2 id="compatibility">Compatibility</h2>
+<p>This project has been developed using Mac OS and has to run smoothly on the Linux type system.<br>
+Although I don't see any reasons why it wouldn't run on Windows machine.</p></article></body></html>

@@ -1,0 +1,14 @@
+/**
+ * Babel config for eslint only
+ * Client-side Babel configuration is embed inside Webpack config.
+ */
+{
+  "plugins": [
+    ["module-resolver", {
+      "extensions": [".js", ".jsx"],
+      "root": [
+        "./src/client",
+      ],
+    }],
+  ]
+}
