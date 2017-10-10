@@ -2,7 +2,7 @@
 
 ## About
 
-Built by maxceem on topcoder.com
+Built by [maxceem](https://www.topcoder.com/members/maxceem/) on topcoder.com
 
 Challenge Details: https://www.topcoder.com/challenge-details/30059233/?type=develop&noncache=true
 
